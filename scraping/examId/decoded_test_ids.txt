@@ -1,0 +1,51 @@
+Base 10 ID   | Test Name
+--------------------------------------------------------------------------------
+6433115      | GATE 2026 DEMO TEST CS
+6434994      | Topicwise Test-1 Part Syllabus GATE 2025 CS Theory of Computation-1
+6434996      | Topicwise Test-2 Part Syllabus GATE 2025 CS Theory of Computation-2
+6434997      | Topicwise Test-3 Part Syllabus GATE 2025 CS Algorithms -1
+6434998      | Topicwise 6464631Test-4 Part Syllabus GATE 2025 CS Algorithms-2
+6434999      | Topicwise Test-5 Part Syllabus GATE 2025 CS Computer Organization and Architecture-1
+6435000      | Topicwise Test-6 Part Syllabus GATE 2025 CS Computer Organization and Architecture -2
+6435002      | Topicwise Test-7 Part Syllabus GATE 2025 CS Databases-1
+6435003      | Topicwise Test-8 Part Syllabus GATE 2025 CS Databases-2
+6435004      | Topicwise Test-9 Part Syllabus GATE 2025 CS Engineering Mathematics-1
+6435005      | Topicwise Test-10 Part Syllabus GATE 2025 CS Engineering Mathematics-2
+6464583      | Topicwise Test-11 Part Syllabus GATE 2025 CS General Aptitude-1
+6464584      | Topicwise Test-12 Part Syllabus GATE 2025 CS General Aptitude-2
+6464585      | Topicwise Test-13 Part Syllabus GATE 2025 CS Operating System-1
+6464586      | Topicwise Test-14 Part Syllabus GATE 2025 CS Operating System-2
+6464587      | Topicwise Test-15 Part Syllabus GATE 2025 CS Programming and Data Structures-1
+6464588      | Topicwise Test-16 Part Syllabus GATE 2025 CS Programming and Data Structures-2
+6464589      | Topicwise Test-17 Part Syllabus GATE 2025 CS Computer Networks-1
+6464590      | Topicwise Test-18 Part Syllabus GATE 2025 CS Computer Networks-2
+6464591      | Topicwise Test-19 Part Syllabus GATE 2025 CS Digital Logic-1
+6464592      | Topicwise Test-20 Part Syllabus GATE 2025 CS Digital Logic-2
+6464593      | Topicwise Test-21 Part Syllabus GATE 2025 CS Discrete Mathematics-1
+6464594      | Topicwise Test-22 Part Syllabus GATE 2025 CS Discrete Mathematics-2
+6464595      | Topicwise Test-23 Part Syllabus GATE 2025 CS Compiler Design-1
+6464596      | Topicwise Test-24 Part Syllabus GATE 2025 CS Compiler Design-2
+6464597      | Subjectwise Test-1 Part Syllabus GATE 2025 CS Theory of Computation
+6464598      | Subjectwise Test-2 Part Syllabus GATE 2025 CS Algorithms
+6464599      | Subjectwise Test-3 Part Syllabus GATE 2025 CS Computer Organization and Architecture
+6464600      | Subjectwise Test-4 Part Syllabus GATE 2025 CS Operating System
+6464601      | Subjectwise Test-5 Part Syllabus GATE 2025 CS Engineering Mathematics
+6464602      | Subjectwise Test-6 Part Syllabus GATE 2025 CS General Aptitude
+6464603      | Subjectwise Test-7 Part Syllabus GATE 2025 CS Database
+6464604      | Subjectwise Test-8 Part Syllabus GATE 2025 CS Programming and Data Structures
+6464605      | Subjectwise Test-9 Part Syllabus GATE 2025 CS Computer Networks
+6464606      | Subjectwise Test-10 Part Syllabus GATE 2025 CS Digital Logic
+6464607      | Subjectwise Test-11 Part Syllabus GATE 2025 CS Compiler Design
+6464608      | Subjectwise Test-12 Part Syllabus GATE 2025 CS Discrete Mathematics
+6464609      | Basic Level Test-1 Full Syllabus GATE 2025 CS
+6464610      | Basic Level Test-2 Full Syllabus GATE 2025 CS
+6464611      | Basic Level Test-3 Full Syllabus GATE 2025 CS
+6464612      | Basic Level Test-4 Full Syllabus GATE 2025 CS
+6464613      | Advance Level Test-1 Full Syllabus GATE 2025 CS
+6464614      | Advance Level Test-2 Full Syllabus GATE 2025 CS
+6464615      | Advance Level Test-3 Full Syllabus GATE 2025 CS
+6464616      | Advance Level Test-4 Full Syllabus GATE 2025 CS
+6464617      | Mock Level Test-1 Full Syllabus GATE 2025 CS
+6464618      | Mock Level Test-2 Full Syllabus GATE 2025 CS
+6464619      | Mock Level Test-3 Full Syllabus GATE 2025 CS
+6464620      | Mock Level Test-4 Full Syllabus GATE 2025 CS
