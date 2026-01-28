@@ -19,6 +19,19 @@ DEFAULT_HEADERS = {
 # Initial token from a fresh login
 INITIAL_TOKEN = "W0n4i4pj+w40sULY6j5o2qQqIyG2HoGZHk+oi+08V1pjyvLzubRRih87yQzCBWVi5GIVgi+on8mC*k85ogE9k89W4*XHeTbNaMenpsTQFk4vnz0FyPY3v6m9HLRNd+I1KNUKg3NOeC*CwnqTWY3RryY2UQN82wEV43euEQ5j4bDOt7owYiKUu28X6Xju9dP8lNwFQWR63lRenPr89Z6IdpYF6F*ATwy6vceI*Tcj9AaGprAjjIFU9bYY*TsS7SMZJi4Xa1aEOBfT50RVMamtxhQ8miQhofTy5prsixmhgYwhtCfy6jB98*so5YlmQ6KpdqvNTIZuB88Y0n3Ytu0NbIREqu44*fHG1p7QPyAyIkCDJazOlcz0mKff3Y4mfj+ejoC8L32jJEZROf8Pe1R7TWrhCqZcRUigETOaHR99QwQEh2jeJQHXjzePZG939+tR3CX83ILUwAu+1HIqdwEqiEMdy4OEp9AfCzQP0NahVEXnk3xHIF0sGWLRTfG*QyPYLmp3Zc1pn0ic5BnIXPnSXA=="
 
+BASE_URL = "https://think.thinkexam.com/api/v1/"
+
+# Base JSON structure for API requests
+BASE_REQUEST_DATA = {
+    "publicKey": "QAZWSXEDCRFVTGBYtinksaas_1@pt",
+    "requestUrl": "ots2026.onlinetestseriesmadeeasy.in",
+    "async": False,
+    "service": "Thinkexam",
+    "apiUrl": "https://think.thinkexam.com",
+    "action": "getQuestiondata",
+    "returnType": "json"
+}
+
 # Mapping for encrypted MCQ answers
 MCQ_MAPPING = {
     "Dsdj/LJX8pBs6q+b96fwiQ==": "Option 1",

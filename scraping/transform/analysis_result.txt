@@ -1,0 +1,31 @@
+Total Questions Analyzed: 197
+Field Name                     | Empty/Zero %    | Count
+------------------------------------------------------------
+ENGLISH->SOLUTION              |         100.00% | 197
+ENGLISH->ESSAY_ID              |         100.00% | 197
+LABEL_1                        |         100.00% | 197
+LABEL_2                        |         100.00% | 197
+fldUnit                        |         100.00% | 197
+IS_IMAGE_TYPE                  |         100.00% | 197
+IS_COMPILER                    |         100.00% | 197
+IS_RECORDER                    |         100.00% | 197
+TEST_CASE_TYPE                 |         100.00% | 197
+fldTextAreaEnable              |         100.00% | 197
+ESSAY_SORT                     |         100.00% | 197
+SORTING_OPTIONS                |         100.00% | 197
+OPTION_LABEL                   |         100.00% | 197
+FREE_SPACE                     |         100.00% | 197
+ESSAY_TIME                     |         100.00% | 197
+MINIMUM_QUE_TIME               |         100.00% | 197
+isAnswerFileUpload             |         100.00% | 197
+MAX_OPT_LIMIT                  |         100.00% | 197
+TIME                           |         100.00% | 197
+ESSAY_SORT_H                   |         100.00% | 197
+SORTING_OPTIONS_H              |         100.00% | 197
+TEST_CASE_TYPE_H               |         100.00% | 197
+OPTION_LABEL_H                 |         100.00% | 197
+DIFFCULTY_NAME                 |          94.92% | 187
+ANSWER_TYPE                    |          70.05% | 138
+ENGLISH->OPT1                  |           1.52% | 3
+ENGLISH->CORRECT_ANSWER        |           1.52% | 3
+READABLE_ANSWER                |           1.52% | 3

@@ -1,5 +1,9 @@
-import json
 import re
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from io_utils import read_json, write_json
 
 def parse_test_name(test_name):
     details = {
@@ -37,8 +41,10 @@ def parse_test_name(test_name):
 
 def extract_test_info(input_file, output_file):
     try:
-        with open(input_file, 'r') as f:
-            data = json.load(f)
+        data = read_json(input_file)
+        if not data:
+            print(f"Error: Could not read {input_file}")
+            return
         
         test_list = data.get('data', [])
         extracted_info = []
@@ -57,8 +63,7 @@ def extract_test_info(input_file, output_file):
                 entry = {k: v for k, v in entry.items() if v is not None}
                 extracted_info.append(entry)
         
-        with open(output_file, 'w') as f:
-            json.dump(extracted_info, f, indent=2)
+        write_json(extracted_info, output_file)
             
         print(f"Successfully extracted {len(extracted_info)} tests with refined details (no nulls) to {output_file}")
         
@@ -66,8 +71,6 @@ def extract_test_info(input_file, output_file):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    # data.json is in the parent of scraping folder
-    import os
     current_dir = os.path.dirname(os.path.abspath(__file__))
     input_path = os.path.join(current_dir, "../../data.json")
     output_path = os.path.join(current_dir, "test_ids.json")

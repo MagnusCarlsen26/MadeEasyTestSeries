@@ -1,14 +1,15 @@
 import json
 import os
+from io_utils import write_json
 import time
 import sys
 from collections import defaultdict
 
 # Add parent directory to path to allow importing core
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from core import MadeEasyAPI
+from scripts.downloadExamQuestions import scrape_test_data
 
-def probe_range(api, start, end, step=1, delay=0.2, name="Range"):
+def probe_range(start, end, step=1, delay=0.2, name="Range"):
     """Probe a range of IDs"""
     results = []
     total = (end - start) // step + 1
@@ -18,7 +19,7 @@ def probe_range(api, start, end, step=1, delay=0.2, name="Range"):
     
     found_count = 0
     for i, test_id in enumerate(range(start, end + 1, step), 1):
-        data = api.scrape_test(test_id)
+        data = scrape_test_data(test_id)
         
         if data and isinstance(data, dict):
             q_keys = [k for k in data.keys() if k.startswith('qu')]
@@ -49,30 +50,31 @@ def probe_range(api, start, end, step=1, delay=0.2, name="Range"):
     return results
 
 def main():
-    api = MadeEasyAPI()
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.normpath(os.path.join(current_dir, "../extractions"))
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = os.path.normpath(os.path.join(current_dir, "../../scraped_data"))
 
-    all_results = []
-    
     print("\n" + "=" * 80)
-    print("COMPREHENSIVE EXAM ID PROBE (REFACTORED)")
+    print("COMPREHENSIVE EXAM ID PROBE")
     print("=" * 80)
     
-    # PHASE 1: Fill known gaps
-    all_results.extend(probe_range(api, 6464573, 6464582, step=1, delay=0.2, name="Gap 1 (IN-CS)"))
-    all_results.extend(probe_range(api, 6464621, 6464625, step=1, delay=0.2, name="Gap 2 (CS-EE)"))
-    
-    # ... (other phases simplified for brevity in this example, or kept as is)
-    all_results.extend(probe_range(api, 6464500, 6464549, step=1, delay=0.2, name="ME Block Area"))
+    try:
+        start_range = int(input("Enter start ID: "))
+        end_range = int(input("Enter end ID: "))
+        sample_step = int(input("Enter step (default 1): ") or "1")
+    except ValueError:
+        print("Invalid input.")
+        return
 
-    # Save results
-    output_file = os.path.join(output_dir, "comprehensive_probe_results.json")
-    with open(output_file, 'w') as f:
-        json.dump(all_results, f, indent=2)
-    
-    print(f"✓ Results saved to: {output_file}")
+    all_results = probe_range(start_range, end_range, step=sample_step, name="User Range")
+
+    if all_results:
+        # Save results
+        output_file = os.path.join(output_dir, "comprehensive_probe_results.json")
+        write_json(all_results, output_file)
+        
+        print(f"✓ Results saved to: {output_file}")
+    else:
+        print("No valid tests found.")
 
 if __name__ == "__main__":
     main()

@@ -1,8 +1,11 @@
-import json
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from io_utils import read_json
 
 def analyze_data_json(file_path):
-    with open(file_path, 'r') as f:
-        data = json.load(f)
+    data = read_json(file_path)
     
     test_list = data.get('data', [])
     categories = {}
