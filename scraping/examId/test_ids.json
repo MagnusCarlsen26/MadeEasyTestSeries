@@ -1,0 +1,295 @@
+[
+  {
+    "testId": "NjQzMzExNQ==",
+    "testName": "GATE 2026 DEMO TEST CS",
+    "testType": "Other"
+  },
+  {
+    "testId": "NjQzNDk5NA==",
+    "testName": "Topicwise Test-1 Part Syllabus GATE 2025 CS Theory of Computation-1",
+    "testType": "Topicwise",
+    "subject": "Theory of Computation"
+  },
+  {
+    "testId": "NjQ2NDYwOQ==",
+    "testName": "Basic Level Test-1 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Basic"
+  },
+  {
+    "testId": "NjQ2NDU5Nw==",
+    "testName": "Subjectwise Test-1 Part Syllabus GATE 2025 CS Theory of Computation",
+    "testType": "Subjectwise",
+    "subject": "Theory of Computation"
+  },
+  {
+    "testId": "NjQzNDk5Ng==",
+    "testName": "Topicwise Test-2 Part Syllabus GATE 2025 CS Theory of Computation-2",
+    "testType": "Topicwise",
+    "subject": "Theory of Computation"
+  },
+  {
+    "testId": "NjQ2NDYxMA==",
+    "testName": "Basic Level Test-2 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Basic"
+  },
+  {
+    "testId": "NjQ2NDU5OA==",
+    "testName": "Subjectwise Test-2 Part Syllabus GATE 2025 CS Algorithms",
+    "testType": "Subjectwise",
+    "subject": "Algorithms"
+  },
+  {
+    "testId": "NjQ2NDU5OQ==",
+    "testName": "Subjectwise Test-3 Part Syllabus GATE 2025 CS Computer Organization and Architecture",
+    "testType": "Subjectwise",
+    "subject": "Computer Organization and Architecture"
+  },
+  {
+    "testId": "NjQ2NDYxMQ==",
+    "testName": "Basic Level Test-3 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Basic"
+  },
+  {
+    "testId": "NjQzNDk5Nw==",
+    "testName": "Topicwise Test-3 Part Syllabus GATE 2025 CS Algorithms -1",
+    "testType": "Topicwise",
+    "subject": "Algorithms"
+  },
+  {
+    "testId": "NjQ2NDYwMA==",
+    "testName": "Subjectwise Test-4 Part Syllabus GATE 2025 CS Operating System",
+    "testType": "Subjectwise",
+    "subject": "Operating System"
+  },
+  {
+    "testId": "NjQzNDk5OA==",
+    "testName": "Topicwise Test-4 Part Syllabus GATE 2025 CS Algorithms-2",
+    "testType": "Topicwise",
+    "subject": "Algorithms"
+  },
+  {
+    "testId": "NjQ2NDYxMg==",
+    "testName": "Basic Level Test-4 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Basic"
+  },
+  {
+    "testId": "NjQ2NDYwMQ==",
+    "testName": "Subjectwise Test-5 Part Syllabus GATE 2025 CS Engineering Mathematics",
+    "testType": "Subjectwise",
+    "subject": "Engineering Mathematics"
+  },
+  {
+    "testId": "NjQzNDk5OQ==",
+    "testName": "Topicwise Test-5 Part Syllabus GATE 2025 CS Computer Organization and Architecture-1",
+    "testType": "Topicwise",
+    "subject": "Computer Organization and Architecture"
+  },
+  {
+    "testId": "NjQ2NDYxMw==",
+    "testName": "Advance Level Test-1 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Advance"
+  },
+  {
+    "testId": "NjQ2NDYxNA==",
+    "testName": "Advance Level Test-2 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Advance"
+  },
+  {
+    "testId": "NjQ2NDYwMg==",
+    "testName": "Subjectwise Test-6 Part Syllabus GATE 2025 CS General Aptitude",
+    "testType": "Subjectwise",
+    "subject": "General Aptitude"
+  },
+  {
+    "testId": "NjQzNTAwMA==",
+    "testName": "Topicwise Test-6 Part Syllabus GATE 2025 CS Computer Organization and Architecture -2",
+    "testType": "Topicwise",
+    "subject": "Computer Organization and Architecture"
+  },
+  {
+    "testId": "NjQ2NDYxNQ==",
+    "testName": "Advance Level Test-3 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Advance"
+  },
+  {
+    "testId": "NjQ2NDYwMw==",
+    "testName": "Subjectwise Test-7 Part Syllabus GATE 2025 CS Database",
+    "testType": "Subjectwise",
+    "subject": "Database"
+  },
+  {
+    "testId": "NjQzNTAwMg==",
+    "testName": "Topicwise Test-7 Part Syllabus GATE 2025 CS Databases-1",
+    "testType": "Topicwise",
+    "subject": "Databases"
+  },
+  {
+    "testId": "NjQ2NDYxNg==",
+    "testName": "Advance Level Test-4 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Advance"
+  },
+  {
+    "testId": "NjQ2NDYwNA==",
+    "testName": "Subjectwise Test-8 Part Syllabus GATE 2025 CS Programming and Data Structures",
+    "testType": "Subjectwise",
+    "subject": "Programming and Data Structures"
+  },
+  {
+    "testId": "NjQzNTAwMw==",
+    "testName": "Topicwise Test-8 Part Syllabus GATE 2025 CS Databases-2",
+    "testType": "Topicwise",
+    "subject": "Databases"
+  },
+  {
+    "testId": "NjQzNTAwNA==",
+    "testName": "Topicwise Test-9 Part Syllabus GATE 2025 CS Engineering Mathematics-1",
+    "testType": "Topicwise",
+    "subject": "Engineering Mathematics"
+  },
+  {
+    "testId": "NjQ2NDYwNQ==",
+    "testName": "Subjectwise Test-9 Part Syllabus GATE 2025 CS Computer Networks",
+    "testType": "Subjectwise",
+    "subject": "Computer Networks"
+  },
+  {
+    "testId": "NjQ2NDYxNw==",
+    "testName": "Mock Level Test-1 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Mock"
+  },
+  {
+    "testId": "NjQzNTAwNQ==",
+    "testName": "Topicwise Test-10 Part Syllabus GATE 2025 CS Engineering Mathematics-2",
+    "testType": "Topicwise",
+    "subject": "Engineering Mathematics"
+  },
+  {
+    "testId": "NjQ2NDYxOA==",
+    "testName": "Mock Level Test-2 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Mock"
+  },
+  {
+    "testId": "NjQ2NDYwNg==",
+    "testName": "Subjectwise Test-10 Part Syllabus GATE 2025 CS Digital Logic",
+    "testType": "Subjectwise",
+    "subject": "Digital Logic"
+  },
+  {
+    "testId": "NjQ2NDU4Mw==",
+    "testName": "Topicwise Test-11 Part Syllabus GATE 2025 CS General Aptitude-1",
+    "testType": "Topicwise",
+    "subject": "General Aptitude"
+  },
+  {
+    "testId": "NjQ2NDYxOQ==",
+    "testName": "Mock Level Test-3 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Mock"
+  },
+  {
+    "testId": "NjQ2NDYwNw==",
+    "testName": "Subjectwise Test-11 Part Syllabus GATE 2025 CS Compiler Design",
+    "testType": "Subjectwise",
+    "subject": "Compiler Design"
+  },
+  {
+    "testId": "NjQ2NDYyMA==",
+    "testName": "Mock Level Test-4 Full Syllabus GATE 2025 CS",
+    "testType": "Full Syllabus",
+    "level": "Mock"
+  },
+  {
+    "testId": "NjQ2NDYwOA==",
+    "testName": "Subjectwise Test-12 Part Syllabus GATE 2025 CS Discrete Mathematics",
+    "testType": "Subjectwise",
+    "subject": "Discrete Mathematics"
+  },
+  {
+    "testId": "NjQ2NDU4NA==",
+    "testName": "Topicwise Test-12 Part Syllabus GATE 2025 CS General Aptitude-2",
+    "testType": "Topicwise",
+    "subject": "General Aptitude"
+  },
+  {
+    "testId": "NjQ2NDU4NQ==",
+    "testName": "Topicwise Test-13 Part Syllabus GATE 2025 CS Operating System-1",
+    "testType": "Topicwise",
+    "subject": "Operating System"
+  },
+  {
+    "testId": "NjQ2NDU4Ng==",
+    "testName": "Topicwise Test-14 Part Syllabus GATE 2025 CS Operating System-2",
+    "testType": "Topicwise",
+    "subject": "Operating System"
+  },
+  {
+    "testId": "NjQ2NDU4Nw==",
+    "testName": "Topicwise Test-15 Part Syllabus GATE 2025 CS Programming and Data Structures-1",
+    "testType": "Topicwise",
+    "subject": "Programming and Data Structures"
+  },
+  {
+    "testId": "NjQ2NDU4OA==",
+    "testName": "Topicwise Test-16 Part Syllabus GATE 2025 CS Programming and Data Structures-2",
+    "testType": "Topicwise",
+    "subject": "Programming and Data Structures"
+  },
+  {
+    "testId": "NjQ2NDU4OQ==",
+    "testName": "Topicwise Test-17 Part Syllabus GATE 2025 CS Computer Networks-1",
+    "testType": "Topicwise",
+    "subject": "Computer Networks"
+  },
+  {
+    "testId": "NjQ2NDU5MA==",
+    "testName": "Topicwise Test-18 Part Syllabus GATE 2025 CS Computer Networks-2",
+    "testType": "Topicwise",
+    "subject": "Computer Networks"
+  },
+  {
+    "testId": "NjQ2NDU5MQ==",
+    "testName": "Topicwise Test-19 Part Syllabus GATE 2025 CS Digital Logic-1",
+    "testType": "Topicwise",
+    "subject": "Digital Logic"
+  },
+  {
+    "testId": "NjQ2NDU5Mg==",
+    "testName": "Topicwise Test-20 Part Syllabus GATE 2025 CS Digital Logic-2",
+    "testType": "Topicwise",
+    "subject": "Digital Logic"
+  },
+  {
+    "testId": "NjQ2NDU5Mw==",
+    "testName": "Topicwise Test-21 Part Syllabus GATE 2025 CS Discrete Mathematics-1",
+    "testType": "Topicwise",
+    "subject": "Discrete Mathematics"
+  },
+  {
+    "testId": "NjQ2NDU5NA==",
+    "testName": "Topicwise Test-22 Part Syllabus GATE 2025 CS Discrete Mathematics-2",
+    "testType": "Topicwise",
+    "subject": "Discrete Mathematics"
+  },
+  {
+    "testId": "NjQ2NDU5NQ==",
+    "testName": "Topicwise Test-23 Part Syllabus GATE 2025 CS Compiler Design-1",
+    "testType": "Topicwise",
+    "subject": "Compiler Design"
+  },
+  {
+    "testId": "NjQ2NDU5Ng==",
+    "testName": "Topicwise Test-24 Part Syllabus GATE 2025 CS Compiler Design-2",
+    "testType": "Topicwise",
+    "subject": "Compiler Design"
+  }
+]
