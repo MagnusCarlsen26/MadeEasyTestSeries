@@ -1,6 +1,6 @@
 import json
 import os
-from io_utils import write_json
+from utils.io_utils import write_json
 import time
 import sys
 from collections import defaultdict

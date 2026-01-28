@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.downloadExamQuestions import scrape_test_data
-from io_utils import write_json
+from utils.io_utils import write_json
 
 def probe_test_id(test_id):
     """Test if a test ID exists"""

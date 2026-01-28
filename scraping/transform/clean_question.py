@@ -2,9 +2,8 @@ import os
 import sys
 from .decode_answer import decode_answer
 
-# Add parent directory to path to allow importing core config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from config import GARBAGE_FIELDS, GARBAGE_ENGLISH_FIELDS
+from utils.config import GARBAGE_FIELDS, GARBAGE_ENGLISH_FIELDS
 
 def clean_question(q):
     """Removes garbage fields and adds a READABLE_ANSWER."""

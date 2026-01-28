@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from io_utils import read_json
+from utils.io_utils import read_json
 
 def analyze_data_json(file_path):
     data = read_json(file_path)

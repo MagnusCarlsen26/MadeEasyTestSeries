@@ -5,7 +5,7 @@ import sys
 from urllib.parse import urlparse
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from io_utils import write_binary
+from utils.io_utils import write_binary
 
 def download_single_image(url, output_dir, session=None):
     """Downloads a single image and returns status: 'downloaded', 'skipped', or 'error'"""

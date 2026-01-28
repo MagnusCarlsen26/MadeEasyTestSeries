@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from io_utils import read_json, write_json
+from utils.io_utils import read_json, write_json
 
 def parse_test_name(test_name):
     details = {
@@ -72,6 +72,6 @@ def extract_test_info(input_file, output_file):
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    input_path = os.path.join(current_dir, "../../data.json")
+    input_path = os.path.join(current_dir, "../../final_data.json")
     output_path = os.path.join(current_dir, "test_ids.json")
     extract_test_info(input_path, output_path)

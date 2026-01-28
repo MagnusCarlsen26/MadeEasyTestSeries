@@ -5,7 +5,7 @@ root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_dir)
 
 from transform import extract_category, process_question
-from io_utils import read_json, write_json
+from utils.io_utils import read_json, write_json
 
 def transform_data(input_path, output_path):
     scraped_data = read_json(input_path)
@@ -51,8 +51,7 @@ def transform_data(input_path, output_path):
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    input_file = os.path.normpath(os.path.join(current_dir, "../../scraped_data/all_tests_questions.json"))
-    # The output should go to web/data.json relative to the project root
-    output_file = os.path.normpath(os.path.join(current_dir, "../../web/data.json"))
+    input_file = os.path.normpath(os.path.join(current_dir, "../scraped_data/all_tests_questions.json"))
+    output_file = os.path.normpath(os.path.join(current_dir, "../scraped_data/final_data.json"))
     
     transform_data(input_file, output_file)

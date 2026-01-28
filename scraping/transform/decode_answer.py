@@ -1,9 +1,8 @@
 import os
 import sys
 
-# Add parent directory to path to allow importing core config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from config import MCQ_MAPPING
+from utils.config import MCQ_MAPPING
 
 def decode_answer(q):
     """Decodes the CORRECT_ANSWER field into a readable string."""

@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from io_utils import read_json, write_json, write_lines
+from utils.io_utils import read_json, write_json, write_lines
 
 def decode_test_ids(file_path):
     data = read_json(file_path)

@@ -1,9 +1,8 @@
 import os
 import sys
 
-# Add parent directory to path to allow importing core config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from config import SUBJECT_MAPPING
+from utils.config import SUBJECT_MAPPING
 
 def extract_category(test_name):
     test_name_lower = test_name.lower()
