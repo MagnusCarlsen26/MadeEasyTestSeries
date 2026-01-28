@@ -4,7 +4,7 @@ import sys
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_dir)
 
-from transform import extract_category, process_question
+from transform import extract_category, process_question, clean_question
 from utils.io_utils import read_json, write_json
 
 def transform_data(input_path, output_path):
@@ -19,6 +19,9 @@ def transform_data(input_path, output_path):
     transformed = {}
 
     for idx, q in enumerate(scraped_data):
+        # Decode answers and clean question data
+        q = clean_question(q)
+        
         test_name = q.get('TEST_NAME', 'Unnamed Test')
         subject = extract_category(test_name)
         test_id = q.get('TEST_ID', 'test_id_unknown')

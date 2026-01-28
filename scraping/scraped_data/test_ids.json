@@ -1,0 +1,19 @@
+[
+  {
+    "testId": "NjQzMzExNQ==",
+    "testName": "GATE 2026 DEMO TEST CS",
+    "testType": "Other"
+  },
+  {
+    "testId": "NjQzNDk5NA==",
+    "testName": "Topicwise Test-1 Part Syllabus GATE 2025 CS Theory of Computation-1",
+    "testType": "Topicwise",
+    "subject": "Theory of Computation"
+  },
+  {
+    "testId": "NjQzNDk5Ng==",
+    "testName": "Topicwise Test-2 Part Syllabus GATE 2025 CS Theory of Computation-2",
+    "testType": "Topicwise",
+    "subject": "Theory of Computation"
+  }
+]
