@@ -4,12 +4,11 @@ import sys
 import requests
 import json
 import base64
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_dir)
 
-from utils.config import DEFAULT_HEADERS, INITIAL_TOKEN, BASE_URL, BASE_REQUEST_DATA
+from utils.config import DEFAULT_HEADERS, INITIAL_TOKEN, BASE_URL, BASE_REQUEST_DATA, RATE_LIMIT_DELAY
 from utils.io_utils import read_json, write_json, ensure_dir
 
 def scrape_test_data(test_id, token=INITIAL_TOKEN):
@@ -36,6 +35,8 @@ def scrape_test_data(test_id, token=INITIAL_TOKEN):
             data=payload, 
             timeout=30 # Increased timeout for stability
         )
+
+        time.sleep(RATE_LIMIT_DELAY)
 
         if response.status_code == 200:
             resp_json = response.json()
@@ -76,10 +77,11 @@ def process_single_test(entry, raw_output_dir):
     else:
         return ("FAILED", test_name)
 
-def run_exam_download(test_ids_path, output_dir, max_workers=5):
+def run_exam_download(test_ids_path, output_dir, max_workers=None):
     """
-    Downloads all exams using threading and saves them individually.
+    Downloads all exams sequentially (single-threaded) for ethical scraping.
     Finally merges them into one big file for backward compatibility.
+    Note: max_workers parameter is kept for compatibility but ignored.
     """
     test_ids_data = read_json(test_ids_path)
     
@@ -87,23 +89,18 @@ def run_exam_download(test_ids_path, output_dir, max_workers=5):
     ensure_dir(raw_output_dir)
     
     total = len(test_ids_data)
-    print(f"[*] Starting download of {total} exams with {max_workers} threads...")
+    print(f"[*] Starting sequential download of {total} exams (single-threaded for ethical scraping)...")
     
     stats = {"SKIPPED": 0, "DOWNLOADED": 0, "FAILED": 0}
     
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_test = {
-            executor.submit(process_single_test, entry, raw_output_dir): entry 
-            for entry in test_ids_data
-        }
-        
-        for i, future in enumerate(as_completed(future_to_test), 1):
-            result = future.result()
-            if result:
-                status, name = result
-                stats[status] += 1
-                sys.stdout.write(f"\r[{i}/{total}] {status}: {name[:30]}...")
-                sys.stdout.flush()
+    # Sequential processing - one at a time
+    for i, entry in enumerate(test_ids_data, 1):
+        result = process_single_test(entry, raw_output_dir)
+        if result:
+            status, name = result
+            stats[status] += 1
+            sys.stdout.write(f"\r[{i}/{total}] {status}: {name[:30]}...")
+            sys.stdout.flush()
     
     print(f"\n[+] Download Complete. Stats: {stats}")
     
@@ -151,15 +148,8 @@ def merge_results(raw_dir, output_file):
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # IMPORTANT: Switching to SCRAPED_DATA directory as the source of truth
     scraped_data_dir = os.path.normpath(os.path.join(current_dir, "../scraped_data"))
     
-    # Input file from scraped_data
     test_ids_path = os.path.join(scraped_data_dir, "test_ids.json")
-    
-    if not os.path.exists(test_ids_path):
-        print(f"Error: {test_ids_path} not found.")
-        sys.exit(1)
 
-    # Output to scraped_data
-    run_exam_download(test_ids_path, scraped_data_dir, max_workers=10)
+    run_exam_download(test_ids_path, scraped_data_dir)

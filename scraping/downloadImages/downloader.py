@@ -2,10 +2,12 @@ import os
 import requests
 import hashlib
 import sys
+import time
 from urllib.parse import urlparse
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.io_utils import write_binary
+from utils.config import RATE_LIMIT_DELAY
 
 def download_single_image(url, output_dir, session=None):
     """Downloads a single image and returns status: 'downloaded', 'skipped', or 'error'"""
@@ -16,6 +18,10 @@ def download_single_image(url, output_dir, session=None):
 
         s = session or requests.Session()
         response = s.get(url, timeout=10)
+        
+        # Rate limiting for ethical scraping
+        time.sleep(RATE_LIMIT_DELAY)
+        
         if response.status_code == 200:
             write_binary(response.content, save_path)
             return 'downloaded'

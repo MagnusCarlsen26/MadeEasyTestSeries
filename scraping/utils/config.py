@@ -75,3 +75,17 @@ SUBJECT_MAPPING = {
     "Discrete Mathematics": "Discrete Mathematics",
     "Compiler Design": "Compiler Design",
 }
+
+# ============================================
+# ETHICAL SCRAPING CONFIGURATION
+# ============================================
+# To minimize server load and be respectful:
+# 1. Sequential processing (single-threaded, no concurrent requests)
+# 2. Rate limiting delay between each request
+# 
+# Adjust RATE_LIMIT_DELAY to control politeness:
+#   - 0.1 = 100ms (faster, less polite)
+#   - 0.5 = 500ms (balanced, recommended)
+#   - 1.0 = 1 second (slower, very polite)
+#   - 2.0 = 2 seconds (very slow, extremely polite)
+RATE_LIMIT_DELAY = 0.5  # seconds between requests
