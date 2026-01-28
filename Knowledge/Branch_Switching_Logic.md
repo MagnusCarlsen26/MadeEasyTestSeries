@@ -16,26 +16,38 @@ The MadeEasy Online Test Series (GATE 2026) covers the following branches:
 - **DA**: Data Science and Artificial Intelligence
 
 ## Discovery Probing Results
-Recent probing for a "Master Key" or branch bypass confirmed a strict **Hard Session Lock**.
+Previously, a "Hard Session Lock" was suspected, implying that branch switching required capturing separate authorization tokens for each branch. However, deeper analysis revealed that the branch context is actually controlled by the `courseId` field in the user's personal profile.
 
-### 1. Hard Session Lock Logic
-The `authorization` and `custom-header` strings act as a mandatory context filter.
-- **Failed Bypass**: Sending a specific `packageId` for Branch A (e.g., CS) while using an `authorization` token for Branch B (e.g., Chemical) results in the API returning the full list of Branch B packages, ignoring the specific ID.
-- **Ignored Overrides**: Injecting `testcategory` or `categoryId` into the request body while on a mismatched session is completely ignored.
-- **No Public Access**: The discovery endpoints require valid, branch-specific authorization headers. No public or generic data retrieval is possible.
+### 1. Dynamic Branch Switching
+The branch context can be programmatically pivoted for a single session without capturing new tokens.
+- **Mechanism**: Sending a `POST` request to `setPersonalInfo` with a target `courseId` updates the account's branch context on the server side.
+- **Persistence**: Once updated, all subsequent calls to `getPackageDetail` (using the same authorization headers) return tests for that specific branch.
+- **Zero-Token Captures**: This allows for complete discovery of all disciplines using only a single valid session.
 
-### 2. Implementation & Context Swapping
-Switching branches programmatically is achieved by **Context Swapping**: using an authorization token captured during a session on the specific branch portal. The API automatically pivots all its responses—including generic "package list" requests—to that branch's ecosystem.
+### 2. Discovered Course IDs
+The following `courseId` values have been mapped to their respective engineering disciplines:
+
+| Branch Name | Course ID |
+|-------------|------------|
+| Civil Engineering | 1427490 |
+| Mechanical Engineering | 1427491 |
+| Electrical Engineering | 1427492 |
+| Electronics Engineering | 1427493 |
+| Computer Science Engineering | 1427494 |
+| Instrumentation Engineering | 1427495 |
+| Production & Industrial Engineering | 1427496 |
+| Chemical Engineering | 1427497 |
+| DS & AI | 1427498 |
 
 ## Discovered Scope
-Through consolidated discovery using known tokens:
-- **Chemical Engineering**: 4 Packages identified (Mock, Practice, Full Syllabus, Combo).
-- **Computer Science**: 5 Packages identified (Mock, Practice, Full Syllabus, 2025/2026 Combos).
+Using the dynamic switching script (`discovery/stream_discovery.py`), the following catalog has been extracted for the GATE 2026/2025 series:
 
-Full details including `testId` lists for these packages are stored in `scraping/discovery/all_branches_data.json`.
+- **All 9 Branches Discovered**: Every branch listed above has exactly 4 major packages identified (Mock, Practice, Full Syllabus, and Combo).
+- **Consolidated Data**: Full details, including `packageId` and individual `testId` arrays, are stored in `scraping/discovery/all_branches_data.json`.
+- **Total Catalog Size**: Discovery confirms a massive database across all disciplines, now fully mapped.
 
 ## Summary for Scaling
-To scale discovery to remaining branches (ME, CE, EE, etc.):
-1. **Header Capture is Mandatory**: Capture a legitimate request from the portal for each target branch.
-2. **One Token per Branch**: A single captured session unlocks the entire `getPackageDetail` scope for that branch.
-3. **testId Extraction**: Once the package details are fetched, the `testId` field provides a comma-separated list of all valid test IDs for that package.
+To scale discovery or scraping to any branch:
+1. **Dynamic Shift**: Run the discovery script to pivot the `courseId`.
+2. **Catalog Fetch**: Call `getPackageDetail` to get the latest list of `packageId` and `testId`.
+3. **Download**: Use the extracted `testId` list to batch-download questions using the core scraping engine.

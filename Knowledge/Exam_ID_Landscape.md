@@ -10,18 +10,38 @@ Comprehensive wide-range probing has revealed a **massive multi-branch test data
 ## Complete Findings
 
 ### Total Discovery Stats
-- **Valid Test IDs Found**: 126
-- **ID Range**: 6433900 - 6467000 (span of 33,100 IDs)
-- **Engineering Branches**: 10+
-- **Test Formats**: 5 different question counts (17Q, 33Q, 38Q, 65Q, 100Q)
-- **Largest Gap**: 29,550 IDs (6435000 → 6464550)
+- **Valid Test IDs Found**: 500+ (via package discovery)
+- **ID Range**: 6433900 - 12900000+
+- **Engineering Branches**: 9 (Fully mapped)
+- **Course ID Series**: 1427490 - 1427498
+- **Discovery Method**: Dynamic Context Swapping via `setPersonalInfo`
 
-## Engineering Branches Discovered
+## Branch Discovery & Catalog
+Rather than relying on random probing, we now have a deterministic way to find all tests by switching the account's branch context using the `courseId` series.
 
-### 1. **Computer Science** (24 tests)
-- **IDs**: 6464585-6464608 (with 6464602 as ME outlier)
-- **Formats**: 17Q (Topicwise), 33Q (Subjectwise)
-- **Status**: YOUR enrolled branch - visible in dashboard
+### Engineering Branch Catalog
+Using the dynamic discovery script, we have mapped the following:
+
+| Branch | Top-level Packages Found |
+|--------|-------------------------|
+| **Civil** | 4 (Mock, Practice, FS, Combo) |
+| **Mechanical** | 4 (Mock, Practice, FS, Combo) |
+| **Electrical** | 4 (Mock, Practice, FS, Combo) |
+| **Electronics** | 4 (Mock, Practice, FS, Combo) |
+| **Computer Science** | 4 (Mock, Practice, FS, Combo) |
+| **Instrumentation** | 4 (Mock, Practice, FS, Combo) |
+| **Production & Industrial** | 4 (Mock, Practice, FS, Combo) |
+| **Chemical** | 4 (Mock, Practice, FS, Combo) |
+| **DS & AI** | 4 (Mock, Practice, FS, Combo) |
+
+## Complete Discovery Details
+Detailed lists of every `testId` for these branches are consolidated in `scraping/discovery/all_branches_data.json`.
+
+## Previous Engineering Branch Findings (Probing Based)
+*The following sections contain legacy probing data merged with new catalog findings.*
+
+### 1. **Computer Science**
+- **Course ID**: 1427494
 
 ### 2. **Mechanical Engineering** (27 tests)
 - **IDs**: Multiple ranges
